@@ -11,6 +11,10 @@ def falling(n, k):
     1
     """
     "*** YOUR CODE HERE ***"
+    if (k == 0):
+        return 1 
+    return falling(n - 1, k - 1) * n
+    
 
 
 
@@ -28,6 +32,11 @@ def sum_digits(y):
     6
     """
     "*** YOUR CODE HERE ***"
+    ans = int(0)
+    while (y):
+        ans += y % 10
+        y //= 10
+    return ans
 
 
 
@@ -47,5 +56,8 @@ def double_eights(n):
     False
     """
     "*** YOUR CODE HERE ***"
+    s = str(n)
+    return s.find("88") != -1
+    
 
 
